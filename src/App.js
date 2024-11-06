@@ -1,29 +1,21 @@
-import './App.css';
-import Logo from './components/Logo';
-import profile from './assets/images/profile.svg'
-import bag from './assets/images/bag.svg'  
+import Header from './components/Header'
+import styled from 'styled-components';
 
-const textOptions = ['CATEGORIES', 'MY BOOKSHELF', 'FAVORITES'];
-const icons = [profile, bag]
+const AppContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(90deg, #002F52 35%, #326589);
+
+  li {
+      list-style: none;
+  }
+`
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <Logo></Logo>
-        <ul className='options-header'>
-          {textOptions.map( (text) => (
-            <li className='option'><p>{text}</p></li>
-          ) ) }
-        </ul>
-
-        <ul className='icons'>
-        {icons.map( (icon) => (
-            <li className='icon'> <img src={icon} alt="Icons"></img></li>
-          ) ) }
-        </ul>
-      </header>
-    </div>
+    <AppContainer>
+      <Header/>
+    </AppContainer>
   );
 }
 
