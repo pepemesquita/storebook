@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Logo from '../../components/Logo';
-import Options from '../../components/Options'
-import Icons from '../../components/Icons'
+import LogoHeader from '../Logo';
+import OptionsHeader from '../OptionsHeader'
+import IconsHeader from '../IconsHeader'
 
 const HeaderContainer = styled.header`
     background-color: #FFF;
@@ -12,9 +12,9 @@ const HeaderContainer = styled.header`
 function Header(){
     return(
         <HeaderContainer>
-            <Logo></Logo>
-            <Options></Options>
-            <Icons></Icons>
+            <LogoHeader></LogoHeader>
+            <OptionsHeader></OptionsHeader>
+            <IconsHeader></IconsHeader>
         </HeaderContainer>
     )
 }
